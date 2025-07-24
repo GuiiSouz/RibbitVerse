@@ -1,11 +1,11 @@
-/* RESET GERAL */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* HTML e BODY */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ html, body {
   color: #ffffff;
 }
 
-/* FUNDO COM GRADIENTE + PARTÍCULAS */
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -29,20 +29,20 @@ html, body {
   animation: gradientFlow 15s ease infinite;
 }
 
-/* ANIMAÇÃO DO GRADIENTE */
+
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* CONTEÚDO SOBRE O FUNDO */
+
 body > *:not(#particles-js) {
   position: relative;
   z-index: 1;
 }
 
-/* NAV */
+
 nav {
   background: #0a0f1b;
   padding: 1rem;
@@ -61,7 +61,7 @@ nav a:hover {
   color: #ff00f7;
 }
 
-/* HERO SECTION */
+
 .hero {
   display: flex;
   align-items: center;
@@ -91,14 +91,14 @@ nav a:hover {
   animation: float 3s ease-in-out infinite;
 }
 
-/* FLUTUAR IMAGEM */
+
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
-/* BOTÕES */
+
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -127,7 +127,7 @@ nav a:hover {
   box-shadow: 0 0 18px 6px rgba(0,255,224,0.5);
 }
 
-/* BOTÕES DA HERO */
+
 .buttons {
   margin-top: 2rem;
 }
@@ -145,7 +145,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* ABOUT SECTION */
+
 .about {
   display: flex;
   align-items: center;
@@ -183,7 +183,7 @@ nav a:hover {
   text-shadow: 0 0 4px rgba(0, 255, 224, 0.4);
 }
 
-/* CAIXA COM EFEITO VIDRO */
+
 .glass-box {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -193,7 +193,7 @@ nav a:hover {
   border-radius: 16px;
 }
 
-/* SEPARADOR */
+
 .separator {
   width: 100%;
   height: 12px;
@@ -214,7 +214,7 @@ nav a:hover {
   100% { background-position: 0% 50%; }
 }
 
-/* TABELA TOKENOMICS */
+
 .tokenomics-table {
   width: 100%;
   border-collapse: collapse;
@@ -235,7 +235,7 @@ nav a:hover {
   color: #00ffe0;
 }
 
-/* FOOTER */
+
 footer {
   text-align: center;
   padding: 2rem;
@@ -244,7 +244,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -330,7 +330,7 @@ footer {
   100% { transform: scale(1.5); opacity: 0; }
 }
 
-/* MEME CAROUSEL */
+
 .meme-carousel {
   padding: 4rem 2rem;
   text-align: center;
