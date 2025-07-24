@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RibbitVerse | RibZ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#MEME">MEME</a>
+  </nav>
+
+  <section class="hero">
+  <div class="hero-text">
+    <h1 class="glow-title">THE TOAD HAS ARRIVED.<br>AND WITH HIM, A<br>REVOLUTION OF<br>SAME CORNER</h1>
+    <div class="buttons">
+      <a href="#" class="btn green glow-btn">BUY RBTV</a>
+      <a href="#" class="btn purple glow-btn">Whitepaper</a>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="#" class="btn neon pulse-neon"><span>Mint RibZ</span></a>
+    </div>
+  </div>
+  <div class="hero-img halo">
+    <img src="IMG/banner.png" alt="RibZ mascote" />
+  </div>
+</section>
+
+  <div class="separator"></div>
+
+  <section class="about" id="about">
+  <div class="about-img">
+    <img src="IMG/ribz_cruzado_sem_fundo.png" alt="RibZ sério" />
+  </div>
+  <div class="about-text">
+    <h2>About RibbitVerse</h2>
+    <p>RibZ hails from the planet Frogoonia, where humor is worth more than gold.<br>
+    It arrived on the blockchain to show that a good token is a bad token.<br>
+    Community is the heart of RibbitVerse.</p>
+  </div>
+</section>
+
+  <div class="separator"></div>
+
+  <section class="section" id="tokenomics">
+  <h2>Tokenomics</h2>
+    <table class="tokenomics-table">
+      <thead>
+        <tr><th>Component</th><th>Percentage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Liquidity</td><td>40%</td></tr>
+        <tr><td>Burn</td><td>10%</td></tr>
+        <tr><td>Rewards</td><td>20%</td></tr>
+        <tr><td>Development</td><td>15%</td></tr>
+        <tr><td>Marketing & Memes</td><td>15%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+<section class="meme-carousel" id="MEME">
+  <div class="section-separator">
+    <hr>
+    <span>COMMUNITY WALL</span>
+    <hr>
+  </div>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev">⬅️</button>
+    <div class="carousel-track" id="carousel-track">
+      <img src="IMG/1 meme.png" alt="meme 1" />
+      <img src="IMG/2 meme.png" alt="meme 2" />
+      <img src="IMG/meme3.jpg" alt="meme 3" />
+      <img src="IMG/meme4.jpg" alt="meme 4" />
+    </div>
+    <button class="carousel-btn next">➡️</button>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 RibbitVerse. All rights reserved.
+  </footer>
+
+  <audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_9b29bdf6e0.mp3" preload="auto"></audio>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00ffe0" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.4 },
+        "size": { "value": 3 },
+        "move": { "enable": true, "speed": 1 }
+      }
+    });
+
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sound = document.getElementById('clickSound');
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  </script>
+  <script>
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let index = 0;
+  const slideWidth = 400;
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % track.children.length;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + track.children.length) % track.children.length;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  });
+</script>
+</body>
+</html>
