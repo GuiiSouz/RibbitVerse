@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RibbitVerse | RibZ</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <meta name="description" content="RibbitVerse - Web3 Memecoin Demo with mint simulation, wallet connect and community features." />
+  <meta property="og:title" content="RibbitVerse | RibZ" />
+  <meta property="og:description" content="Dive into RibbitVerse, the futuristic memecoin project with minting, tokenomics, roadmap and community!" />
+  <meta property="og:image" content="IMG/banner.png" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <a href="#" class="brand">
+      <div class="logo">RZ</div>
+      <div class="brand-text">
+        <strong>RibbitVerse</strong><br />
+        <small>Memecoin The Best</small>
+      </div>
+    </a>
+
+    <nav id="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#mint">Mint</a>
+      <a href="#community">Community</a>
+      <button id="btnConnect" class="btn neon wallet-btn" title="Connect Wallet">
+        <span class="dot"></span>
+        <span id="btnConnectLabel">Connect Wallet</span>
+      </button>
+    </nav>
+
+    <button id="darkToggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="section hero-section">
+      <div class="hero-copy">
+        <span class="kicker">NEW LAUNCH — RIBBITVERSE</span>
+        <h1>
+          THE <span class="accent">TOAD</span> HAS ARRIVED.<br />
+          HOLD, RIB, REPEAT.
+        </h1>
+        <p class="lead">
+          RibZ é a memecoin da comunidade de Frogoonia — um projeto fictício para
+          demonstrar design Web3, mint simulada, e componentes interativos.
+        </p>
+        <button id="mintBtnHero" class="btn btn-primary">🚀 Mint RibZ</button>
+      </div>
+      <div class="hero-mascot">
+        <img src="IMG/banner.png" alt="RibZ mascot" />
+      </div>
+    </section>
+
+  <!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="section-inner" style="display:flex; flex-wrap:wrap; gap:3rem; align-items:center; justify-content:center;">
+    <div style="flex:1 1 350px; min-width:280px;">
+      <h2 class="section-title">About <span class="accent">RibbitVerse</span></h2>
+      <p class="lead-text">RibZ vem de Frogoonia — uma memecoin de comunidade focada em diversão, arte e memes. Esta demo mostra componentes Web3 (connect wallet, mint simulado, barra de progresso) com um design limpo e profissional para portfólio.</p>
+      <ul class="features-list">
+        <li><strong>Design:</strong> neon futurista, tipografia marcante.</li>
+        <li><strong>Interação:</strong> connect wallet (MetaMask) + modo demo.</li>
+        <li><strong>Mint:</strong> simulação com progresso e armazenamento local.</li>
+      </ul>
+      <a class="btn btn-outline" href="#community" style="margin-top:1rem;">Veja a Community Wall</a>
+    </div>
+
+    <div style="flex:1 1 350px; min-width:280px; text-align:center;">
+      <img src="IMG/ribz_cruzado_sem_fundo.png" alt="RibZ art" style="max-width:100%; border-radius:16px; box-shadow: 0 0 30px #00ffe0;" />
+    </div>
+  </div>
+</section>
+
+<section id="tokenomics" class="section tokenomics-section" style="padding: 2rem; background: #04091e; border-radius: 20px; box-shadow: 0 0 20px #00ffe0cc;">
+  <h2 class="section-title" style="color:#00fff7; font-family: 'Press Start 2P', cursive; text-shadow: 0 0 15px #00fff7;">Tokenomics</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2.5rem; justify-content:center; align-items:center;">
+    <div style="background: #0a0a0a; border-radius: 20px; padding: 2rem; box-shadow: 0 0 15px #00fff7;">
+      <canvas id="tokenomicsChart" width="400" height="400" aria-label="Tokenomics distribution chart" role="img"></canvas>
+
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap: 1.2rem; margin-top: 1rem;">
+        <span style="color:#00fff7; font-weight:bold; font-family: 'Press Start 2P', cursive;">■ Liquidity (40%)</span>
+        <span style="color:#ff0080; font-weight:bold; font-family: 'Press Start 2P', cursive;">■ Burn (10%)</span>
+        <span style="color:#0d9aff; font-weight:bold; font-family: 'Press Start 2P', cursive;">■ Rewards (20%)</span>
+        <span style="color:#adcf00; font-weight:bold; font-family: 'Press Start 2P', cursive;">■ Development (15%)</span>
+        <span style="color:#ff358f; font-weight:bold; font-family: 'Press Start 2P', cursive;">■ Marketing & Memes (15%)</span>
+      </div>
+    </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="section roadmap-section" style="padding: 3rem 1rem; background: #120026; border-radius:16px; margin-top: 2rem;">
+  <h2 class="section-title" style="margin-bottom:2rem;">Roadmap</h2>
+  <div class="roadmap-timeline" style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center;">
+    <div class="roadmap-item" style="background:#1b0033; padding:1.5rem; border-radius:12px; flex: 1 1 220px; box-shadow: 0 0 10px #7f00ff; transition: transform 0.3s ease;">
+      <div class="quarter" style="font-weight:700; color:#ff7fff; margin-bottom:8px;">Q1 2025</div>
+      <div class="desc" style="color:#ccc;">Conceito, whitepaper e site inicial.</div>
+    </div>
+    <div class="roadmap-item" style="background:#1b0033; padding:1.5rem; border-radius:12px; flex: 1 1 220px; box-shadow: 0 0 10px #ff00ff; transition: transform 0.3s ease;">
+      <div class="quarter" style="font-weight:700; color:#ff4fff; margin-bottom:8px;">Q2 2025</div>
+      <div class="desc" style="color:#ccc;">Lançamento de smart contracts e simulação mint.</div>
+    </div>
+    <div class="roadmap-item" style="background:#1b0033; padding:1.5rem; border-radius:12px; flex: 1 1 220px; box-shadow: 0 0 10px #ff70ff; transition: transform 0.3s ease;">
+      <div class="quarter" style="font-weight:700; color:#ff00dd; margin-bottom:8px;">Q3 2025</div>
+      <div class="desc" style="color:#ccc;">Campanhas de marketing e parceria com artistas.</div>
+    </div>
+    <div class="roadmap-item" style="background:#1b0033; padding:1.5rem; border-radius:12px; flex: 1 1 220px; box-shadow: 0 0 10px #ff0099; transition: transform 0.3s ease;">
+      <div class="quarter" style="font-weight:700; color:#ff0066; margin-bottom:8px;">Q4 2025</div>
+      <div class="desc" style="color:#ccc;">Expansão da comunidade e staking real.</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hover zoom nos cards do roadmap */
+  .roadmap-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00ff;
+    cursor: pointer;
+  }
+</style>
+    <!-- MINT -->
+    <section id="mint" class="section mint-section">
+      <h2>Mint your RibZ</h2>
+      <div class="mint-card">
+        <div class="mint-info">
+          <div><strong>Price:</strong> 0.01 ETH (demo)</div>
+          <div><strong>Your balance:</strong> <span id="userBal">0</span> RibZ</div>
+          <div><strong>Supply:</strong> <span id="totalMinted">0</span> / 1000</div>
+        </div>
+        <div class="mint-progress-bar">
+          <div id="mintBar"></div>
+        </div>
+        <div class="mint-controls">
+          <input
+            id="qty"
+            type="number"
+            min="1"
+            max="10"
+            value="1"
+            aria-label="Quantity to mint"
+          />
+          <button id="mintAction" class="btn btn-primary">🚀 Mint</button>
+          <button id="freeDemo" class="btn btn-outline">🎁 Demo Airdrop</button>
+        </div>
+        <p class="muted small-text">Transações simuladas — sem uso real de blockchain.</p>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="section community-section">
+      <h2>Community Wall</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" aria-label="Previous Meme">←</button>
+        <div class="carousel-track" role="list">
+          <div class="meme" role="listitem"><img src="IMG/meme%201.png" alt="Meme 1" /></div>
+          <div class="meme" role="listitem"><img src="IMG/meme2.png" alt="Meme 2" /></div>
+          <div class="meme" role="listitem"><img src="IMG/meme3.png" alt="Meme 3" /></div>
+          <div class="meme" role="listitem"><img src="IMG/meme4.jpg" alt="Meme 4" /></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next Meme">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 RibbitVerse — Portfolio Demo · made with 💚
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
